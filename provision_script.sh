@@ -1,7 +1,7 @@
 #!/usr/bin/bash
 if [ -d "/home/jenkins/app_level_balancer/" ]
 then
-  cd youtube_comments_retriever
+  cd app_level_balancer
   git pull https://github.com/Quotermain/app_level_balancer
   echo "Pulled"
 else
