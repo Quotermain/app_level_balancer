@@ -10,6 +10,7 @@ else
   echo "Cloned"
 fi
 
+git checkout "$1"
 sudo pkill gunicorn
 gunicorn --bind 0.0.0.0:5000 wsgi:app --daemon
 
