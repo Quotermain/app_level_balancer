@@ -5,6 +5,7 @@ pipeline {
 
         stage('clear known_hosts') {
             steps {
+              echo env.BRANCH_NAME
               sh "./clear_known_hosts.sh"
             }
         }
