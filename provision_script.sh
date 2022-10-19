@@ -8,3 +8,6 @@ else
   git clone https://github.com/Quotermain/app_level_balancer
   echo "Cloned"
 fi
+
+cd app_level_balancer
+gunicorn --bind 0.0.0.0:5000 wsgi:app &
