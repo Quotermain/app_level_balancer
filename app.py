@@ -22,7 +22,7 @@ def retrieve_comments(video_id):
         'http://192.168.10.21:5000/predict',
         json=dict_of_comments
     )
-    return prediction
+    return prediction.text
     #return json.dumps({'comments': list_of_comments})
 
 if __name__ == "__main__":
