@@ -13,10 +13,14 @@ app = Flask(__name__)
 def retrieve_comments(video_id):
     video_id = str(video_id)
     list_of_comments = get_comments(video_id)
-    print(list_of_comments[:4])
+    dict_of_comments = {
+        i: value
+        for i, value in enumerate(list_of_comments)
+    }
+    #print(dict_of_comments[0])
     prediction = requests.post(
         'http://192.168.10.21:5000/predict',
-        json={"text": list_of_comments[0]}
+        json=dict_of_comments
     )
     return prediction
     #return json.dumps({'comments': list_of_comments})
