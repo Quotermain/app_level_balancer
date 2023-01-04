@@ -5,5 +5,5 @@ do
 	ssh-keygen -f "/var/lib/jenkins/.ssh/known_hosts" -R $host
 done
 
-ssh-keyscan -H quoterback.ru >> "/var/lib/jenkins/.ssh/known_hosts"
-ssh quoterback.ru ssh-keyscan -H 192.168.10.20 >> "/var/lib/jenkins/.ssh/known_hosts"
+sudo ssh-keyscan -H quoterback.ru >> "/var/lib/jenkins/.ssh/known_hosts"
+sudo ssh quoterback.ru ssh-keyscan -H 192.168.10.20 >> "/var/lib/jenkins/.ssh/known_hosts"
